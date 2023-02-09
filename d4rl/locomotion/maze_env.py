@@ -29,7 +29,7 @@ GOAL = G = 'g'
 # Maze specifications for dataset generation
 U_MAZE = [[1, 1, 1, 1, 1],
           [1, R, 0, 0, 1],
-          [1, 0, 1, 0, 1],
+          [1, 0, 0, 0, 1],
           [1, G, 0, 0, 1],
           [1, 1, 1, 1, 1]]
 
@@ -55,7 +55,7 @@ HARDEST_MAZE = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 # Maze specifications with a single target goal
 U_MAZE_TEST = [[1, 1, 1, 1, 1],
               [1, R, 0, 0, 1],
-              [1, 1, 1, 0, 1],
+              [1, 0, 0, 0, 1],
               [1, G, 0, 0, 1],
               [1, 1, 1, 1, 1]]
 
@@ -81,7 +81,7 @@ HARDEST_MAZE_TEST = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 # Maze specifications for evaluation
 U_MAZE_EVAL = [[1, 1, 1, 1, 1],
               [1, 0, 0, R, 1],
-              [1, 0, 1, 1, 1],
+              [1, 0, 0, 0, 1],
               [1, 0, 0, G, 1],
               [1, 1, 1, 1, 1]]
 
@@ -106,7 +106,7 @@ HARDEST_MAZE_EVAL = [[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 
 U_MAZE_EVAL_TEST = [[1, 1, 1, 1, 1],
               [1, 0, 0, R, 1],
-              [1, 0, 1, 1, 1],
+              [1, 0, 0, 0, 1],
               [1, 0, 0, G, 1],
               [1, 1, 1, 1, 1]]
 
