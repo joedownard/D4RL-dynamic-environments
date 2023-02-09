@@ -29,7 +29,7 @@ GOAL = G = 'g'
 # Maze specifications for dataset generation
 U_MAZE = [[1, 1, 1, 1, 1],
           [1, R, 0, 0, 1],
-          [1, 1, 1, 0, 1],
+          [1, 0, 1, 0, 1],
           [1, G, 0, 0, 1],
           [1, 1, 1, 1, 1]]
 
