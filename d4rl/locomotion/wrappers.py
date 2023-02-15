@@ -8,6 +8,11 @@ from collections import deque
 
 
 class ProxyEnv(Env):
+    metadata = {
+        "render_modes": ["rgb_array"],
+        "render.modes": ["rgb_array"]
+    }
+    
     def __init__(self, wrapped_env):
         self._wrapped_env = wrapped_env
         self.action_space = self._wrapped_env.action_space
