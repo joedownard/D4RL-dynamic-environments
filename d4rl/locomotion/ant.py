@@ -55,7 +55,6 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
   @property
   def physics(self):
-    print(self.id)
     # Check mujoco version is greater than version 1.50 to call correct physics
     # model containing PyMjData object for getting and setting position/velocity.
     # Check https://github.com/openai/mujoco-py/issues/80 for updates to api.
