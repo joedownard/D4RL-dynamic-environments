@@ -105,7 +105,7 @@ class MujocoGoalEnv(gym.Env):
         Optionally implement this method, if you need to tinker with camera position
         and so forth.
         """
-        pass
+        self.viewer.cam.trackbodyid = 1
     
     def reset(self):
         self.sim.reset()
