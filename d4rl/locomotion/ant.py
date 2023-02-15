@@ -135,8 +135,12 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
   def viewer_setup(self):
     from pprint import pprint
-    pprint(vars(self.sim))
-    self.viewer.cam.trackbodyid = 5
+    self.viewer.cam.trackbodyid = -1
+
+    self.viewer.cam.lookat[0] += 0.5
+    self.viewer.cam.lookat[1] += 0.5
+    self.viewer.cam.lookat[2] += 0.5
+
     self.viewer.cam.elevation = -90
     self.viewer.cam.distance = self.model.stat.extent * 1
 
