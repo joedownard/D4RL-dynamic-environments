@@ -134,7 +134,7 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     return self._get_obs()
 
   def viewer_setup(self):
-    self.viewer.cam.trackbodyid = 1
+    self.viewer.cam.trackbodyid = 5
     self.viewer.cam.elevation = -90
     self.viewer.cam.distance = self.model.stat.extent * 1
 
