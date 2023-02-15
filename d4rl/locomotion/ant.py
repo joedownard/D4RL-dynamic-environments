@@ -55,6 +55,8 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
   @property
   def physics(self):
+    print(self.sim.id)
+    print(self.model.id)
     # Check mujoco version is greater than version 1.50 to call correct physics
     # model containing PyMjData object for getting and setting position/velocity.
     # Check https://github.com/openai/mujoco-py/issues/80 for updates to api.
@@ -134,6 +136,8 @@ class AntEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     return self._get_obs()
 
   def viewer_setup(self):
+    self.viewer.cam.trackbodyid = 1
+    self.viewer.cam.elevation = -90
     self.viewer.cam.distance = self.model.stat.extent * 0.5
 
   def get_xy(self):
