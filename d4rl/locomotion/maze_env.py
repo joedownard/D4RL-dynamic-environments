@@ -143,6 +143,11 @@ U_MAZE_MIDDLE_WALL =       [[1, 1, 1, 1, 1],
 
 
 class MazeEnv(gym.Env):
+    metadata = {
+        "render_modes": ["rgb_array"],
+        "render.modes": ["rgb_array"],
+    }
+
   LOCOMOTION_ENV = None  # Must be specified by child class.
 
   def __init__(
