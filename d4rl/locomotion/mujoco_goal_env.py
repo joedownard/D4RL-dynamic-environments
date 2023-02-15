@@ -43,6 +43,7 @@ class MujocoGoalEnv(gym.Env):
         self.frame_skip = frame_skip
         self.model = mujoco_py.load_model_from_path(fullpath)
         self.sim = mujoco_py.MjSim(self.model)
+        print(self.sim.id)
         self.data = self.sim.data
         self.viewer = None
         self._viewers = {}
@@ -106,6 +107,7 @@ class MujocoGoalEnv(gym.Env):
         and so forth.
         """
         self.viewer.cam.trackbodyid = 1
+        self.viewer.cam.elevation = -90
     
     def reset(self):
         self.sim.reset()
